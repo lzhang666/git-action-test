@@ -24,6 +24,9 @@ jobs:
       - name: Test
         run: |
           google-chrome --version
+          wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          rm chromedriver_linux64.zip
           ls
           pwd
           python test.py
