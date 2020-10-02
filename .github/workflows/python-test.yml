@@ -24,4 +24,5 @@ jobs:
       - name: Test
         run: |
           google-chrome --version
+          sudo find / -type f -name chromedriver
           python test.py
