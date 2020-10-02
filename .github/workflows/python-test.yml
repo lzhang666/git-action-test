@@ -19,6 +19,13 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: '3.8'
+        
+      # Python Dependency Installation
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v2
+          with:
+          path: "requirements.txt"
+
 
       # Runs the test action
       - name: Test
