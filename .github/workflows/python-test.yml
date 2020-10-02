@@ -23,7 +23,7 @@ jobs:
       # Python Dependency Installation
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v2
-          with:
+        with:
           path: "requirements.txt"
 
 
