@@ -37,4 +37,7 @@ jobs:
           export PATH=$PATH:/home/runner/work/git-action-test/git-action-test/ >> ~/.profile
           # ls
           # pwd
+          
+      - name: Run Test
+        run:
           python seleniumTest.py
