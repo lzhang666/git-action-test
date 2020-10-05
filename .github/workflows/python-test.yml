@@ -41,7 +41,7 @@ jobs:
         run: |
           git clone https://github.com/slateci/minislate.git
           cd minislate/
-          ./minislate init --selenium
+          ./minislate init -s
           cd ..
           
       - name: Run Test
