@@ -25,27 +25,28 @@ jobs:
         uses: py-actions/py-dependency-install@v2
         with:
           path: "requirements.txt"
-      - name: Find docker
-        run: docker
+      # - name: Find docker
+      #   run: docker
 
 
-      # # Runs the test action
-      # - name: Install Chrome and web driver
-      #   run: |
-      #     google-chrome --version
-      #     wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
-      #     unzip chromedriver_linux64.zip
-      #     rm chromedriver_linux64.zip
-      #     export PATH=$PATH:/home/runner/work/git-action-test/git-action-test/ >> ~/.profile
-      #     # ls
-      #     # pwd
-      # - name: Setup MiniSLATE
-      #   run: |
-      #     git clone https://github.com/slateci/minislate.git
-      #     cd minislate/
-      #     ./minislate init -s
-      #     cd ..
+      # Runs the test action
+      - name: Install Chrome and web driver
+        run: |
+          google-chrome --version
+          wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          rm chromedriver_linux64.zip
+          export PATH=$PATH:/home/runner/work/git-action-test/git-action-test/ >> ~/.profile
+          # ls
+          # pwd
+      - name: Setup MiniSLATE
+        run: |
+          git clone https://github.com/slateci/minislate.git
+          cd minislate/
+          cat docker-compose.yml
+          ./minislate init -s
+          cd ..
           
-      # - name: Run Test
-      #   run:
-      #     python seleniumTest.py
+      - name: Run Test
+        run:
+          python seleniumTest.py
