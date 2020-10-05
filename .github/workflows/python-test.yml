@@ -28,7 +28,7 @@ jobs:
 
 
       # Runs the test action
-      - name: Test
+      - name: Install Chrome and web driver
         run: |
           google-chrome --version
           wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
@@ -37,6 +37,12 @@ jobs:
           export PATH=$PATH:/home/runner/work/git-action-test/git-action-test/ >> ~/.profile
           # ls
           # pwd
+      - name: Setup MiniSLATE
+        run: |
+          git clone https://github.com/slateci/minislate.git
+          cd minislate/
+          ./minislate init
+          cd ..
           
       - name: Run Test
         run:
