@@ -30,7 +30,7 @@ jobs:
 
 
       # Runs the test action
-      - name: Install Chrome and web driver
+      - name: Install Chrome web driver
         run: |
           google-chrome --version
           wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
