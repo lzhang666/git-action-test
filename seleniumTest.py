@@ -6,8 +6,7 @@ options = Options()
 options.headless = True
 driver = Chrome(executable_path=path, options=options)
 
-driver.get('https://www.uchicago.edu/')
+driver.get('http://localhost:5000/slate_portal')
 driver.set_window_size(1920, 1080)
 print(driver.title)
 driver.quit()
-
