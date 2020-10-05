@@ -47,7 +47,10 @@ jobs:
           ./minislate init --selenium
           # cat docker-compose.yml
           cd ..
-          
-      - name: Run Test
+      - name: Download tests
+        run: |
+          git clone https://github.com/lzhang666/portal-unit-test.git
+      - name: Run Tests
         run:
-          python tests/seleniumTest.py
+          # python tests/seleniumTest.py
+          python portal-unit-test/main.py
