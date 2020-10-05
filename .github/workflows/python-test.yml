@@ -29,7 +29,7 @@ jobs:
       #   run: docker
 
 
-      # Runs the test action
+      # install chrome web driver
       - name: Install Chrome web driver
         run: |
           google-chrome --version
@@ -39,6 +39,7 @@ jobs:
           export PATH=$PATH:/home/runner/work/git-action-test/git-action-test/ >> ~/.profile
           # ls
           # pwd
+      # set up minislate
       - name: Setup MiniSLATE
         run: |
           git clone https://github.com/slateci/minislate.git
