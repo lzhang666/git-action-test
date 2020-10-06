@@ -39,7 +39,7 @@ jobs:
           export PATH=$PATH:/home/runner/work/git-action-test/git-action-test/ >> ~/.profile
           # ls
           # pwd
-      # set up minislate
+      # set up miniSlate
       - name: Setup MiniSLATE
         run: |
           git clone https://github.com/slateci/minislate.git
